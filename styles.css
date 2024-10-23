@@ -154,5 +154,67 @@ footer p {
         padding: 15px;
         margin: 10px auto;
     }
-	
 }
+
+.accordion-header {
+      cursor: pointer;
+      padding: 10px;
+      background-color: #f1f1f1;
+      border: 1px solid #ddd;
+      display: flex;
+      justify-content: space-between; /* Align arrow to the right */
+      align-items: center;
+    }
+
+    .accordion-header:hover {
+      background-color: #e0e0e0;
+    }
+
+    .accordion-content {
+      display: none;
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+
+    /* Styling the arrow */
+    .accordion-header img {
+      transition: transform 0.3s ease; /* Smooth rotation */
+    }
+
+    /* Rotate the arrow when the accordion is open */
+    .accordion-header.active img {
+      transform: rotate(90deg); /* 90 degrees rotation when open */
+    }
+
+/* Basic styles for the accordion */
+        .accordion-section {
+          margin-bottom: 10px;
+        }
+
+        .accordion-content {
+          display: none;
+          padding: 10px;
+          border: 1px solid #ddd;
+        }
+
+        .accordion-header {
+          cursor: pointer;
+          background-color: #f1f1f1;
+          padding: 10px;
+          border: 1px solid #ddd;
+        }
+
+        .accordion-header:hover {
+          background-color: #e0e0e0;
+        }
+
+        .accordion-header::after {
+          content: '\25B6'; /* Unicode for right-facing arrow */
+          font-size: 12px;
+          float: right; /* Align to the right */
+          transition: transform 0.3s ease;
+        }
+
+        .accordion-header.active::after {
+          transform: rotate(90deg); /* Rotate 90 degrees */
+        }

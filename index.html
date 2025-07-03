@@ -1,91 +1,275 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sunil Kumar Sukesan - Test Automation Manager</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Add custom styles here -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sunil Kumar Sukesan - Test Automation Manager</title>
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<style>
+		body {
+			animation: fadeIn 1s ease-in;
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+		}
+
+		@keyframes fadeIn {
+			from {
+				opacity: 0;
+			}
+
+			to {
+				opacity: 1;
+			}
+		}
+
+		header {
+			background: linear-gradient(to right, #007acc, #005b99);
+			color: white;
+			padding: 30px 0;
+			text-align: center;
+			position: relative;
+			overflow: hidden;
+			animation: slideInFromTop 1s ease-in-out;
+		}
+
+		header h1 {
+			font-size: 2.3rem;
+			margin: 0;
+			letter-spacing: 1px;
+			animation: slideInFromLeft 1s ease-in-out;
+		}
+
+		header h2,
+		header p,
+		header a {
+			animation: slideInFromLeft 1.2s ease-in-out;
+		}
+
+		header img {
+			position: absolute;
+			top: 50%;
+			right: 150px;
+			transform: translateY(-50%);
+			height: 210px;
+			border-radius: 10px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+			animation: slideInFromRight 1.2s ease-in-out;
+		}
+
+		header a {
+			color: white;
+			font-weight: bold;
+			text-decoration: none;
+		}
+
+		header a:hover {
+			text-decoration: underline;
+		}
+
+		.resume-link {
+			display: inline-block;
+			margin-top: 20px;
+			padding: 10px 20px;
+			background-color: white;
+			color: #007acc;
+			border-radius: 5px;
+			font-weight: bold;
+			text-decoration: none;
+			transition: background-color 0.3s ease;
+			animation: fadeIn 2s ease-in;
+		}
+
+		.resume-link:hover {
+			background-color: #e6e6e6;
+		}
+
+		/* Responsive fix for image overlap */
+		@media (max-width: 768px) {
+			header img {
+				position: static;
+				display: block;
+				margin: 20px auto 0;
+				transform: none;
+				height: 180px;
+				animation: slideInFromBottom 1.2s ease-in-out;
+			}
+
+			header h1 {
+				font-size: 2rem;
+			}
+
+			header h2 {
+				font-size: 1.2rem;
+			}
+
+			.resume-link {
+				margin-bottom: 10px;
+			}
+
+			.contact-button {
+				display: inline-block;
+				margin: 0 5px;
+				padding: 5px 10px;
+				background-color: transparent;
+				border: 1px solid white;
+				border-radius: 4px;
+				color: white;
+				font-weight: bold;
+				text-decoration: none;
+				transition: all 0.3s ease;
+			}
+
+			.contact-button:hover {
+				background-color: white;
+				color: #007acc;
+			}
+		}
+	</style>
 </head>
+
 <body>
-
-    <header>
-        <h1>Sunil Kumar Sukesan</h1>
-        <p>Test Automation Manager | Chennai, India</p>
-        <p>
-		Phone: +91-9600022545 | Email: <a href="mailto:sunilkumar.sukesan@gmail.com">sunilkumar.sukesan@gmail.com</a></p>
-        <p><a href="https://github.com/sunilkumarsukesan" target="_blank">GitHub</a> | 
-        <a href="https://www.linkedin.com/in/sunilkumar-sukesan/" target="_blank">LinkedIn</a></p>
+	<header>
+		<h1>Sunil Kumar Sukesan</h1>
+		<h2>Test Automation Manager, PwC Malaysia</h2>
+		<p>
+			<i class="fas fa-phone"></i>
+			<a href="tel:+60173520140" style="color: white; text-decoration: none;">+60-173520140</a>
+			&nbsp; | &nbsp;
+			<i class="fab fa-whatsapp"></i>
+			<a href="https://wa.me/919600022545" target="_blank"
+				style="color: white; text-decoration: none;">+91-9600022545</a>
+		</p>
+		<p><i class="fas fa-envelope"></i> <a
+				href="mailto:sunilkumar.sukesan@gmail.com">sunilkumar.sukesan@gmail.com</a></p>
+		<p>
+			<a href="https://github.com/sunilkumarsukesan" target="_blank"><i class="fab fa-github"></i> GitHub</a> |
+			<a href="https://www.linkedin.com/in/sunilkumar-sukesan/" target="_blank"><i class="fab fa-linkedin"></i>
+				LinkedIn</a>
+		</p>
 		<img src="SunilKumarS.png" alt="Sunil's Photo">
-		<a href="SunilKumar_Sukesan_Resume.pdf" download style="color: #fff; text-decoration: underline;">Click here to download Resume</a></p> <!-- Adjust the link accordingly -->
-    </header>
+		<br>
+		<a href="SunilKumar_Sukesan_Resume.pdf" class="resume-link" download>Click here to download Resume</a>
+	</header>
+</body>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Result-focused and customer-oriented Test Automation Manager with almost 12 years of professional experience. Expertise in designing test automation frameworks, data processing and visualization, and automating process flows.</p>
-    </section>
-	
+</html>
+
+
+<section id="about">
+	<h2>About Me</h2>
+	<p><strong>Test Automation Manager with 13 years of experience</strong> in designing robust automation frameworks,
+		leading high-performing QA teams, and optimizing test processes across <strong>web, mobile, and API</strong>
+		platforms. <strong>Skilled in automation strategy, data visualization</strong>, and driving efficiency through
+		<strong>process automation and continuous improvement</strong>.
+</section>
+
 <section id="skills">
-    <h2>Technical Skills</h2>
-    <ul class="skill-list">
-        <li>✔ <strong>Front-End (UI) Automation:</strong> Selenium WebDriver with Java/Python/C#, Seetest Mobile Automation</li>
-        <li>✔ <strong>Back-End (API) Automation:</strong> Apache Kafka Streams, Restful automation using Postman and Rest Assured API, Apache HttpClient, HttpURLConnection, SOAP UI</li>
-        <li>✔ <strong>DevOps Automation:</strong> Git, Maven, Jenkins, Docker</li>
-        <li>✔ <strong>Programming Languages:</strong> Core Java, Python, C#</li>
-        <li>✔ <strong>Source Control Tools:</strong> GitHub, Bitbucket</li>
-        <li>✔ <strong>Build Tools:</strong> Maven, Gradle</li>
-        <li>✔ <strong>CI/CD Tools:</strong> Jenkins, Azure Pipeline, TeamCity</li>
-        <li>✔ <strong>Others:</strong> Excel VBA, SQL, and Teradata Basics</li>
-    </ul>
+	<h2>Technical Skills</h2>
+	<ul class="skill-list">
+		<li>✔ <strong>Front-End (UI) Automation:</strong> Selenium WebDriver with Java/Python/C#,
+			WebdriverIO+TypeScript+Mocha, Seetest Mobile Automation</li>
+		<li>✔ <strong>Back-End (API) Automation:</strong> Apache Kafka Streams, Restful automation using Postman and
+			Rest Assured API, Apache HttpClient, HttpURLConnection, SOAP UI</li>
+		<li>✔ <strong>DevOps Automation:</strong> Git, Maven, Jenkins, Docker</li>
+		<li>✔ <strong>Programming Languages:</strong> Core Java, Python, C#</li>
+		<li>✔ <strong>Source Control Tools:</strong> GitHub, Bitbucket</li>
+		<li>✔ <strong>Build Tools:</strong> Maven, Gradle</li>
+		<li>✔ <strong>CI/CD Tools:</strong> Jenkins, Azure DevOps Pipeline, TeamCity</li>
+		<li>✔ <strong>Others:</strong> Excel VBA, SQL, and Teradata Basics</li>
+	</ul>
 </section>
 
 
-    <section id="experience">
-        <h2>Work Experience</h2>
-        
-        <h4 class="accordion-header">Test Manager | Ernst and Young GDS, Chennai, India</h4>
-		<div class="accordion-content">
-        <p><strong>Sep 2024 - Present</strong></p>
-        <ul>
-            <li>Defined testing and acceptance strategies and determined quality assurance benchmarks.</li>
-            <li>Enhanced test efficiency by implementing automated testing processes and tools.</li>
-            <li>Documented testing procedures for developers and future testing use.</li>
-            <li>Built automated test scripts to handle repetitive software testing work.</li>
-        </ul>
-		</div>
+<section id="experience">
+	<h2>Work Experience</h2>
 
-        <h4 class="accordion-header">Assistant Vice President - Core QA Automation | Citicorp Services India Pvt Ltd, Chennai, India</h4>
-		<div class="accordion-content">
-        <p><strong>Jun 2023 - Sep 2024</strong></p>
-        <ul>
-			<li>Responsible for updating the framework with the latest changes.</li>
-			<li>Created Jira tasks for automation and assigned them to the automation team members, later reviewing and merging them into the existing framework.</li>
-			<li>Added Kafka streams handling code, static and dynamic (for specific functionality), optimized the existing framework by removing redundant, duplicate, and tightly coupled code.</li>
-			<li>Updated the automation pack for validating the end-to-end transaction flow, which extracts the SWIFT message from the database and compares the values in the message with the enriched Kafka.</li>
-			<li>Created a Python function that converts XML data to Excel for handling validation.</li>
-			<li>Explored the Robot Framework in Python with the goal of enabling non-technical resources to automate functional tests.</li>
-			<li>Supported UFT regression by automating over 20 automation journeys during the Christmas week of '23.</li>
-			<li>Created a custom Maven build using Java that uploads evidence to Zephyr with a single click, reducing manual effort by approximately 80%.</li>
+	<h4 class="accordion-header">Test Manager | PwC Malaysia, Kuala Lumpur, Malaysia</h4>
+	<div class="accordion-content">
+		<p><strong>Jan 2025 - Present</strong></p>
+		<ul>
+			<li><strong>Led the end-to-end design and implementation</strong> of scalable test automation frameworks
+				for <strong>Salesforce-based applications</strong>, integrating <strong>Web, API, and
+					Mobile</strong> testing layers.</li>
+			<li>Developed a robust <strong>WebDriverIO + TypeScript</strong> framework from scratch with support for
+				<strong>encrypted config handling</strong> and <strong>rerun of failed tests</strong>, reducing
+				manual regression efforts by <strong>70%</strong>.
+			</li>
+			<li>Introduced <strong>AI-driven enhancements using LLMs</strong> (e.g., for <strong>test case
+					generation</strong> and <strong>defect classification</strong>), significantly accelerating
+				automation coverage in early stages.</li>
+			<li>Reduced flaky test execution by over <strong>60%</strong> through <strong>intelligent retry
+					logic</strong>, <strong>advanced wait strategies</strong>, and <strong>failure classification
+					models</strong>.</li>
+			<li>Automated <strong>test case uploads and reporting</strong> into <strong>Azure DevOps</strong> using
+				<strong>custom Excel macros</strong> and <strong>REST API integrations</strong>, cutting down manual
+				effort by <strong>80%</strong>.
+			</li>
+			<li><strong>Mentored</strong> junior automation engineers and conducted <strong>knowledge-sharing
+					sessions</strong> within the <strong>PwC QA CoE</strong> to promote <strong>GenAI
+					adoption</strong> in test strategy.</li>
+			<li><strong>Volunteered at PwC's AI Conference</strong>, showcasing <strong>GenAI-driven automation
+					solutions</strong> and contributing to overall event success.</li>
+
 		</ul>
-			</div>
+	</div>
 
-        <h4 class="accordion-header">Test Automation - Assistant Manager | KPMG, Bengaluru, India</h4>
-		<div class="accordion-content">
-        <p><strong>Dec 2022 - Jun 2023</strong></p>
+	<h4 class="accordion-header">Test Manager | Ernst and Young GDS, Chennai, India</h4>
+	<div class="accordion-content">
+		<p><strong>Sep 2024 - Nov 2024 </strong></p>
+		<ul>
+			<li>Defined testing and acceptance strategies and determined quality assurance benchmarks.</li>
+			<li>Enhanced test efficiency by implementing automated testing processes and tools.</li>
+			<li>Documented testing procedures for developers and future testing use.</li>
+			<li>Built automated test scripts to handle repetitive software testing work.</li>
+		</ul>
+	</div>
 
-        <ul>
+	<h4 class="accordion-header">Assistant Vice President - Core QA Automation | Citicorp Services India Pvt Ltd,
+		Chennai, India</h4>
+	<div class="accordion-content">
+		<p><strong>Jun 2023 - Sep 2024</strong></p>
+		<ul>
+			<li>Responsible for updating the framework with the latest changes.</li>
+			<li>Created Jira tasks for automation and assigned them to the automation team members, later reviewing
+				and merging them into the existing framework.</li>
+			<li>Added Kafka streams handling code, static and dynamic (for specific functionality), optimized the
+				existing framework by removing redundant, duplicate, and tightly coupled code.</li>
+			<li>Updated the automation pack for validating the end-to-end transaction flow, which extracts the SWIFT
+				message from the database and compares the values in the message with the enriched Kafka.</li>
+			<li>Created a Python function that converts XML data to Excel for handling validation.</li>
+			<li>Explored the Robot Framework in Python with the goal of enabling non-technical resources to automate
+				functional tests.</li>
+			<li>Supported UFT regression by automating over 20 automation journeys during the Christmas week of '23.
+			</li>
+			<li>Created a custom Maven build using Java that uploads evidence to Zephyr with a single click,
+				reducing manual effort by approximately 80%.</li>
+		</ul>
+	</div>
+
+	<h4 class="accordion-header">Test Automation - Assistant Manager | KPMG, Bengaluru, India</h4>
+	<div class="accordion-content">
+		<p><strong>Dec 2022 - Jun 2023</strong></p>
+
+		<ul>
 			<li>Created and maintained the Azure CI/CD pipeline for automation execution.</li>
-			<li>Led two major projects from a testing perspective by estimating tasks, stories, and technical debts that could be accommodated in a given PI, as well as for the sprints within the PI.</li>
+			<li>Led two major projects from a testing perspective by estimating tasks, stories, and technical debts
+				that could be accommodated in a given PI, as well as for the sprints within the PI.</li>
 			<li>Assigned tasks to QA team members and monitored workflow to ensure progress.</li>
-			<li>Utilized Azure's Key Vault feature to securely retrieve passwords in the test automation framework, eliminating the need to store them directly and ensuring compliance with security guidelines.</li>
-			<li>Cleared automation backlogs and provided regular progress updates on test automation to stakeholders.</li>
+			<li>Utilized Azure's Key Vault feature to securely retrieve passwords in the test automation framework,
+				eliminating the need to store them directly and ensuring compliance with security guidelines.</li>
+			<li>Cleared automation backlogs and provided regular progress updates on test automation to
+				stakeholders.</li>
 			<li>Updated the test automation framework to reflect the latest changes and requirements.</li>
 		</ul>
-				</div>
-		
-		<h4 class="accordion-header">Test Architect - Associate Manager | Accenture, Chennai, India</h4>
-		<div class="accordion-content">
-        <p><strong>Sep 2021 - Nov 2022</strong></p>
-        <ul>
+	</div>
+
+	<h4 class="accordion-header">Test Architect - Associate Manager | Accenture, Chennai, India</h4>
+	<div class="accordion-content">
+		<p><strong>Sep 2021 - Nov 2022</strong></p>
+		<ul>
 			<li>Responsible for updating the framework with the latest changes and requirements.</li>
 			<li>Creating and maintaining the CI/CD pipeline for automation execution.</li>
 			<li>Responsible for conducting feasibility studies on newer requirements.</li>
@@ -93,95 +277,112 @@
 			<li>Automating the existing process flows using Excel VBA.</li>
 			<li>Conducting KT and training sessions on the automation framework for new joiners.</li>
 		</ul>
-				</div>
-		
-		<h4 class="accordion-header">Automation Test Lead | Barclays Global Service Centre, Chennai, India</h4>
-		<div class="accordion-content">
+	</div>
+
+	<h4 class="accordion-header">Automation Test Lead | Barclays Global Service Centre, Chennai, India</h4>
+	<div class="accordion-content">
 		<p><strong>Aug 2018 - Sep 2021</strong></p>
 		<ul>
-			<li>Proficient in using test automation tools such as SeeTest automation tool for Mobile applications and Selenium WebDriver for web applications.</li>
-			<li>Implemented BDD using Cucumber with Selenium WebDriver and used Rest Assured API to update the results in JIRA for both mobile and web automation.</li>
+			<li>Proficient in using test automation tools such as SeeTest automation tool for Mobile applications
+				and Selenium WebDriver for web applications.</li>
+			<li>Implemented BDD using Cucumber with Selenium WebDriver and used Rest Assured API to update the
+				results in JIRA for both mobile and web automation.</li>
 			<li>Implemented test execution on Docker containers and Selenium Grid.</li>
 			<li>Integrated the tests into the CI/CD pipeline using Jenkins.</li>
-			<li>Managing the overall LCT automation activities, creating automation scripts to run against iOS and Android devices, merging and updating the regression pack regularly.</li>
-			<li>Worked with the feature test teams to review unautomated features and ensure the regression pack stays updated with the latest information.</li>
-			<li>Set up cloud devices, which became a valuable tool for our product owners and testing team to test apps remotely during the lockdown.</li>
-			<li>Defined a process for tracking deferred live defects and automated the flow of generating the weekly reports.</li>
-			<li>Extended my support to the data adoption team by automating the data visualization flow using Python.</li>
-			<li>Automated the NPS and complaints flow by creating a dashboard that updates all the necessary analytical information with a single click.</li>
+			<li>Managing the overall LCT automation activities, creating automation scripts to run against iOS and
+				Android devices, merging and updating the regression pack regularly.</li>
+			<li>Worked with the feature test teams to review unautomated features and ensure the regression pack
+				stays updated with the latest information.</li>
+			<li>Set up cloud devices, which became a valuable tool for our product owners and testing team to test
+				apps remotely during the lockdown.</li>
+			<li>Defined a process for tracking deferred live defects and automated the flow of generating the weekly
+				reports.</li>
+			<li>Extended my support to the data adoption team by automating the data visualization flow using
+				Python.</li>
+			<li>Automated the NPS and complaints flow by creating a dashboard that updates all the necessary
+				analytical information with a single click.</li>
 		</ul>
-					</div>
-		
-		<h4 class="accordion-header">Senior Test Analyst | Barclays Global Service Centre, Chennai, India</h4>
-		<div class="accordion-content">
+	</div>
+
+	<h4 class="accordion-header">Senior Test Analyst | Barclays Global Service Centre, Chennai, India</h4>
+	<div class="accordion-content">
 		<p><strong>May 2015 - Aug 2018</strong></p>
 		<ul>
-			<li>Successful transition from the center of excellence team, and our team continued to update and run the automation regression pack.</li>
-			<li>After the transition, increased the automation coverage from 38 scenarios to 105 scenarios on both devices as a team.</li>
+			<li>Successful transition from the center of excellence team, and our team continued to update and run
+				the automation regression pack.</li>
+			<li>After the transition, increased the automation coverage from 38 scenarios to 105 scenarios on both
+				devices as a team.</li>
 			<li>Involved in creating automation scripts to run against Android devices.</li>
 			<li>Replaced the HTML reports with Extent Reports in the TestNG framework.</li>
 			<li>Implemented the POM (Page Object Model) model in the existing framework.</li>
-			<li>Led the daily Scrum calls with internal teams, tracked the daily automation status, and ensured the work was completed without any issues.</li>
-			<li>Involved in creating test plans, updating the regression sheet, test execution, tracking defects, and issuing the TCM.</li>
+			<li>Led the daily Scrum calls with internal teams, tracked the daily automation status, and ensured the
+				work was completed without any issues.</li>
+			<li>Involved in creating test plans, updating the regression sheet, test execution, tracking defects,
+				and issuing the TCM.</li>
 			<li>Involved in identifying the ideal test scenarios for SRP migration.</li>
-			<li>Responsible for creating live test data with the help of Barclays helpdesk for 5 tranches of the migration project.</li>
+			<li>Responsible for creating live test data with the help of Barclays helpdesk for 5 tranches of the
+				migration project.</li>
 		</ul>
-						</div>
-		
-		<h4 class="accordion-header">Test Analyst | Barclays Global Service Centre, Chennai, India</h4>
-		<div class="accordion-content">
+	</div>
+
+	<h4 class="accordion-header">Test Analyst | Barclays Global Service Centre, Chennai, India</h4>
+	<div class="accordion-content">
 		<p><strong>Dec 2012 - May 2015</strong></p>
 		<ul>
 			<li>Checked the non-transaction pages across the most used desktop browsers and mobile devices.</li>
 			<li>Developed and implemented a defect tracking system that improved bug resolution time by 20%.</li>
 			<li>A whole new Smart Investor journey of 150 screens was tested in a week.</li>
-			<li>Developed an automated test script that checks the links on the given page and returns the broken links.</li>
-			<li>Developed almost 23 VBA macros to reduce manual efforts across the testing team and other teams within the organization.</li>
+			<li>Developed an automated test script that checks the links on the given page and returns the broken
+				links.</li>
+			<li>Developed almost 23 VBA macros to reduce manual efforts across the testing team and other teams
+				within the organization.</li>
 		</ul>
-		</div>
-		</section>
-		
-		<section id="github-repos">
-    <h2>GitHub Repositories</h2>
-			<h4 class="accordion-header">Repos</h4>
-			<div class="accordion-content">
-    <ul id="repo-list">
-        <!-- Repositories will be dynamically added here by JavaScript -->
-    </ul>
-			</div>
+	</div>
+</section>
+
+<section id="github-repos">
+	<h2>GitHub Repositories</h2>
+	<h4 class="accordion-header">Repos</h4>
+	<div class="accordion-content">
+		<ul id="repo-list">
+			<!-- Repositories will be dynamically added here by JavaScript -->
+		</ul>
+	</div>
 </section>
 
 
-    <section id="accomplishments">
-        <h2>Accomplishments</h2>
-        <ul>
-            <li>Recognized for the Barclays value "Excellence", year 2016 and 2018</li>
-			<li>Recognized for the Barclays value "Stewardship", year 2020</li>
-            <li>Received Star of the Month Award, March 2023, KPMG</li>
-            <li>Gratitude Award, year 2023, Citicorp India Services</li>
-        </ul>
-    </section>
-		
-		
-
-
-        <!-- Add more positions here as needed -->
-    </section>
-
-    <section id="education">
-        <h2>Education</h2>
-		<p>June 2007 - May 2011</p>
-        <p><strong>Bachelor of Engineering: Electronics and Communications Engineering, Sriram Engineering College, Tiruvallur, India</strong></p>
-    </section>
-
-    
+<section id="accomplishments">
+	<h2>Accomplishments</h2>
+	<ul>
+		<li>Recognized for the Barclays value "Excellence", year 2016 and 2018</li>
+		<li>Recognized for the Barclays value "Stewardship", year 2020</li>
+		<li>Received Star of the Month Award, March 2023, KPMG</li>
+		<li>Gratitude Award, year 2023, Citicorp India Services</li>
+	</ul>
+</section>
 
 
 
-    <footer>
-        <p>&copy; 2024 Sunil Kumar Sukesan</p>
-        <p>Date of Birth: 16-02-1990 | Nationality: Indian | Marital Status: Married</p>
-    </footer>
-	<script src="main.js"></script>
+
+<!-- Add more positions here as needed -->
+</section>
+
+<section id="education">
+	<h2>Education</h2>
+	<p>June 2007 - May 2011</p>
+	<p><strong>Bachelor of Engineering: Electronics and Communications Engineering, Sriram Engineering College,
+			Tiruvallur, India</strong></p>
+</section>
+
+
+
+
+
+<footer>
+	<p>&copy; 2024 Sunil Kumar Sukesan</p>
+	<p>Date of Birth: 16-02-1990 | Nationality: Indian | Marital Status: Married</p>
+</footer>
+<script src="main.js"></script>
 </body>
+
 </html>

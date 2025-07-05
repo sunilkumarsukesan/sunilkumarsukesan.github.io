@@ -128,6 +128,16 @@
 			}
 		}
 	</style>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-4BPHFNPFTX"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-4BPHFNPFTX');
+	</script>
+
 </head>
 
 <body>
@@ -381,16 +391,8 @@
 <footer>
 	<p>&copy; 2025 Sunil Kumar Sukesan</p>
 	<p>Nationality: Indian | Resident Country : Malaysia</p>
-	<p>This page has been viewed <span id="viewCount">...</span> times.</p>
 </footer>
 <script src="main.js"></script>
-<script>
-	fetch('https://api.countapi.xyz/hit/sunil-portfolio/visits')
-		.then(res => res.json())
-		.then(data => {
-			document.getElementById('viewCount').textContent = data.value;
-		});
-</script>
 <span id="viewCount"></span>
 </body>
 

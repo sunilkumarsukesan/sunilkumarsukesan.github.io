@@ -11,22 +11,32 @@ body {
 /* Header */
 
 header {
-            background-color: #007acc; /* Cyan color */
-            color: #fff;
-            padding: 20px 0;
-            text-align: center; /* Align text to the left */
-            position: relative; /* For positioning the image */
-        }
+    background-color: #007acc;
+    /* Cyan color */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    /* Align text to the left */
+    position: relative;
+    /* For positioning the image */
+}
 
-        header img {
-           position: absolute; /* Position the image */
-            top: 50%; /* Center vertically */
-            right: 200px; /* Distance from the right */
-            height: 210px; /* Set height for the image (adjust as needed) */
-            width: auto; /* Maintain aspect ratio */
-            transform: translateY(-50%); /* Adjust for vertical centering */
-            border-radius: 5px; /* Optional: add border radius */
-        }
+header img {
+    position: absolute;
+    /* Position the image */
+    top: 50%;
+    /* Center vertically */
+    right: 200px;
+    /* Distance from the right */
+    height: 210px;
+    /* Set height for the image (adjust as needed) */
+    width: auto;
+    /* Maintain aspect ratio */
+    transform: translateY(-50%);
+    /* Adjust for vertical centering */
+    border-radius: 5px;
+    /* Optional: add border radius */
+}
 
 
 header h1 {
@@ -59,8 +69,10 @@ section h2 {
 }
 
 .skill-list {
-    list-style-type: none; /* Remove default bullets */
-    padding: 0; /* Remove padding */
+    list-style-type: none;
+    /* Remove default bullets */
+    padding: 0;
+    /* Remove padding */
 }
 
 /* Content Sections */
@@ -80,8 +92,8 @@ section ul {
 
 section ul li {
     margin-bottom: 2px;
-	padding: 0;
-	font-size: 14px; /
+    padding: 0;
+    font-size: 14px;/
 }
 
 /* Experience Section */
@@ -120,23 +132,34 @@ footer p {
 }
 
 #github-repos {
-    margin-top: 20px; /* Space above the section */
+    margin-top: 20px;
+    /* Space above the section */
 }
 
 #repo-list {
-    display: grid; /* Use grid layout */
-    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
-    gap: 10px; /* Space between the grid items */
-    list-style-type: none; /* Remove default bullets */
-    padding: 0; /* Remove padding */
+    display: grid;
+    /* Use grid layout */
+    grid-template-columns: repeat(3, 1fr);
+    /* Three equal columns */
+    gap: 10px;
+    /* Space between the grid items */
+    list-style-type: none;
+    /* Remove default bullets */
+    padding: 0;
+    /* Remove padding */
 }
 
 #repo-list li {
-    background-color: #f9f9f9; /* Light background for each item */
-    border: 1px solid #ddd; /* Light border */
-    border-radius: 5px; /* Rounded corners */
-    padding: 10px; /* Padding inside each item */
-    text-align: center; /* Center text inside items */
+    background-color: #f9f9f9;
+    /* Light background for each item */
+    border: 1px solid #ddd;
+    /* Light border */
+    border-radius: 5px;
+    /* Rounded corners */
+    padding: 10px;
+    /* Padding inside each item */
+    text-align: center;
+    /* Center text inside items */
 }
 
 
@@ -146,7 +169,8 @@ footer p {
         font-size: 2rem;
     }
 
-    header p, section ul li {
+    header p,
+    section ul li {
         font-size: 1rem;
     }
 
@@ -157,64 +181,74 @@ footer p {
 }
 
 .accordion-header {
-      cursor: pointer;
-      padding: 10px;
-      background-color: #f1f1f1;
-      border: 1px solid #ddd;
-      display: flex;
-      justify-content: space-between; /* Align arrow to the right */
-      align-items: center;
-    }
+    cursor: pointer;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    /* Align arrow to the right */
+    align-items: center;
+}
 
-    .accordion-header:hover {
-      background-color: #e0e0e0;
-    }
+.accordion-header:hover {
+    background-color: #e0e0e0;
+}
 
-    .accordion-content {
-      display: none;
-      padding: 10px;
-      border: 1px solid #ddd;
-    }
+.accordion-content {
+    display: none;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
 
-    /* Styling the arrow */
-    .accordion-header img {
-      transition: transform 0.3s ease; /* Smooth rotation */
-    }
+/* Styling the arrow */
+.accordion-header img {
+    transition: transform 0.3s ease;
+    /* Smooth rotation */
+}
 
-    /* Rotate the arrow when the accordion is open */
-    .accordion-header.active img {
-      transform: rotate(90deg); /* 90 degrees rotation when open */
-    }
+/* Rotate the arrow when the accordion is open */
+.accordion-header.active img {
+    transform: rotate(90deg);
+    /* 90 degrees rotation when open */
+}
 
 /* Basic styles for the accordion */
-        .accordion-section {
-          margin-bottom: 10px;
-        }
+.accordion-section {
+    margin-bottom: 10px;
+}
 
-        .accordion-content {
-          display: none;
-          padding: 10px;
-          border: 1px solid #ddd;
-        }
+.accordion-content {
+    display: none;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
 
-        .accordion-header {
-          cursor: pointer;
-          background-color: #f1f1f1;
-          padding: 10px;
-          border: 1px solid #ddd;
-        }
+.accordion-header {
+    cursor: pointer;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
 
-        .accordion-header:hover {
-          background-color: #e0e0e0;
-        }
+.accordion-header:hover {
+    background-color: #e0e0e0;
+}
 
-        .accordion-header::after {
-          content: '\25B6'; /* Unicode for right-facing arrow */
-          font-size: 12px;
-          float: right; /* Align to the right */
-          transition: transform 0.3s ease;
-        }
+.accordion-header::after {
+    content: '\25B6';
+    /* Unicode for right-facing arrow */
+    font-size: 12px;
+    float: right;
+    /* Align to the right */
+    transition: transform 0.3s ease;
+}
 
-        .accordion-header.active::after {
-          transform: rotate(90deg); /* Rotate 90 degrees */
-        }
+.accordion-header.active::after {
+    transform: rotate(90deg);
+    /* Rotate 90 degrees */
+}
+
+.company-logo {
+  height: 50px;
+}

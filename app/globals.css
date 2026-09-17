@@ -1,26 +1,90 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f6f8fb;
+  --surface: #ffffff;
+  --surface-hover: #eef2f8;
+  --foreground: #101828;
+  --muted: #53627a;
+  --border: #e2e8f2;
+  --primary: #1d4ed8;
+  --primary-hover: #1e40af;
+  --accent: #0d9488;
+  --ring: #93c5fd;
+  --shadow-color: 220 40% 60%;
+}
+
+:root[data-theme="dark"] {
+  --background: #080c14;
+  --surface: #111827;
+  --surface-hover: #1a2438;
+  --foreground: #eef2f8;
+  --muted: #94a3b8;
+  --border: #1f2937;
+  --primary: #60a5fa;
+  --primary-hover: #93c5fd;
+  --accent: #2dd4bf;
+  --ring: #1d4ed8;
+  --shadow-color: 220 60% 4%;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --background: #080c14;
+    --surface: #111827;
+    --surface-hover: #1a2438;
+    --foreground: #eef2f8;
+    --muted: #94a3b8;
+    --border: #1f2937;
+    --primary: #60a5fa;
+    --primary-hover: #93c5fd;
+    --accent: #2dd4bf;
+    --ring: #1d4ed8;
+    --shadow-color: 220 60% 4%;
+  }
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
   --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-accent: var(--accent);
+  --color-ring: var(--ring);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  border-color: var(--border);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+::selection {
+  background: var(--primary);
+  color: white;
+}
+
+.company-logo-wrap {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.company-logo-wrap:hover {
+  transform: scale(1.06);
+  box-shadow: 0 6px 16px -4px hsl(var(--shadow-color) / 0.35);
 }

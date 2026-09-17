@@ -15,6 +15,15 @@ export const profile = {
     "Test Automation Manager with 13 years' experience in QA leadership and automation framework design across web, mobile, and API platforms, with growing specialization in GenAI Test Evaluation and LLM Agent Assurance. Hands-on with GenAI-powered QA tooling (RAG, MCP), Salesforce data migration, and process automation to improve delivery efficiency.",
 };
 
+export const featuredRepos = [
+  "ai-voice-agent",
+  "recall-checker",
+  "ExamSmith",
+  "SeleniumPWMigration",
+  "DockerValidation",
+  "LinearRegression",
+];
+
 export type SkillGroup = {
   category: string;
   skills: string[];

@@ -2,36 +2,59 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import {
-  FiDownload,
-  FiGithub,
-  FiLinkedin,
-  FiMail,
-  FiMapPin,
-  FiPhone,
-} from "react-icons/fi";
-import { FaWhatsapp } from "react-icons/fa";
+import type { IconType } from "react-icons";
+import { FiDownload, FiMail, FiMapPin, FiPhone } from "react-icons/fi";
+import { FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { SiGithub } from "react-icons/si";
 import { profile } from "@/lib/data";
 
 const contactLinks = [
   {
     icon: FiPhone,
+    color: "#22C55E",
     label: profile.phone,
     href: `tel:${profile.phone.replace(/[^+\d]/g, "")}`,
   },
   {
     icon: FaWhatsapp,
+    color: "#25D366",
     label: profile.whatsapp,
     href: `https://wa.me/${profile.whatsapp.replace(/[^\d]/g, "")}`,
   },
-  { icon: FiMail, label: profile.email, href: `mailto:${profile.email}` },
-  { icon: FiMapPin, label: profile.location, href: undefined },
+  {
+    icon: FiMail,
+    color: "#0078D4",
+    label: profile.email,
+    href: `mailto:${profile.email}`,
+  },
+  {
+    icon: FiMapPin,
+    color: "#EA4335",
+    label: profile.location,
+    href: undefined,
+  },
 ];
 
 const socialLinks = [
-  { icon: FiGithub, label: "GitHub", href: profile.github },
-  { icon: FiLinkedin, label: "LinkedIn", href: profile.linkedin },
+  { icon: SiGithub, color: "#181717", label: "GitHub", href: profile.github },
+  {
+    icon: FaLinkedin,
+    color: "#0A66C2",
+    label: "LinkedIn",
+    href: profile.linkedin,
+  },
 ];
+
+function IconBadge({ icon: Icon, color }: { icon: IconType; color: string }) {
+  return (
+    <span
+      className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-white shadow-sm"
+      style={{ color }}
+    >
+      <Icon size={13} />
+    </span>
+  );
+}
 
 export function Hero() {
   return (
@@ -56,28 +79,28 @@ export function Hero() {
           </p>
           <p className="text-white/75">{profile.tagline}</p>
 
-          <div className="mt-5 flex flex-col gap-2 text-sm text-white/90 sm:flex-row sm:flex-wrap sm:justify-center md:justify-start">
-            {contactLinks.map(({ icon: Icon, label, href }) =>
+          <div className="mt-5 flex flex-col gap-2.5 text-sm text-white/90 sm:flex-row sm:flex-wrap sm:justify-center md:justify-start">
+            {contactLinks.map(({ icon, color, label, href }) =>
               href ? (
                 <a
                   key={label}
                   href={href}
                   target={href.startsWith("http") ? "_blank" : undefined}
                   rel={href.startsWith("http") ? "noreferrer" : undefined}
-                  className="inline-flex items-center gap-1.5 transition-colors hover:text-white"
+                  className="inline-flex items-center gap-2 transition-opacity hover:opacity-80"
                 >
-                  <Icon size={14} /> {label}
+                  <IconBadge icon={icon} color={color} /> {label}
                 </a>
               ) : (
-                <span key={label} className="inline-flex items-center gap-1.5">
-                  <Icon size={14} /> {label}
+                <span key={label} className="inline-flex items-center gap-2">
+                  <IconBadge icon={icon} color={color} /> {label}
                 </span>
               )
             )}
           </div>
 
           <div className="mt-6 flex flex-wrap items-center justify-center gap-3 md:justify-start">
-            {socialLinks.map(({ icon: Icon, label, href }) => (
+            {socialLinks.map(({ icon, color, label, href }) => (
               <motion.a
                 key={label}
                 href={href}
@@ -85,9 +108,9 @@ export function Hero() {
                 rel="noreferrer"
                 whileHover={{ scale: 1.06 }}
                 whileTap={{ scale: 0.94 }}
-                className="inline-flex items-center gap-2 rounded-full border border-white/40 px-4 py-2 text-sm font-semibold backdrop-blur-sm transition-colors hover:bg-white/10"
+                className="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/10 py-1.5 pl-1.5 pr-4 text-sm font-semibold backdrop-blur-sm transition-colors hover:bg-white/20"
               >
-                <Icon size={16} /> {label}
+                <IconBadge icon={icon} color={color} /> {label}
               </motion.a>
             ))}
             <motion.a

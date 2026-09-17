@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Chatbot } from "@/components/chatbot";
 import { ThemeProvider, themeInitScript } from "@/components/theme-provider";
 import { profile } from "@/lib/data";
 import "./globals.css";
@@ -30,7 +31,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
       </head>
       <body className="min-h-full flex flex-col bg-background text-foreground">
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          {children}
+          <Chatbot />
+        </ThemeProvider>
       </body>
     </html>
   );
